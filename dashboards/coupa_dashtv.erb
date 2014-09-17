@@ -1,0 +1,47 @@
+<script type='text/javascript'>
+    $(function() {
+        // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+        Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":1},{"col":2,"row":2,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":2,"size_y":1}]')
+        Dashing.widget_base_dimensions = [370, 340]
+        Dashing.numColumns = 5
+    });
+</script>
+<% content_for(:title) { "1080p dashboard" } %>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="server_status" data-view="ServerStatus" data-title="Server Status"></div>
+    </li>
+
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="lunch" data-view="Text" data-title="Master Solano" data-text="5 Failures"  style="background-color:#FF0033;"></div>
+      <!--GREEN 33CC66 RED FF0033-->
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="lunch" data-view="Text" data-title="R12 Solano" data-text="3 Failures" style="background-color:#FF0033;"></div>
+      <!--GREEN 33CC66 RED FF0033-->
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="lunch" data-view="Text" data-title="R11 Solano" data-text="3 Failures" style="background-color:#FF0033;"></div>
+      <!--GREEN 33CC66 RED FF0033-->
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="JOB" data-view="JenkinsBuild" data-title="Master Jenkins" data-min="0" data-max="100"></div>
+    </li>
+
+    <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+      <div data-id="pull_requests" data-view="List" data-title="Open Pull Requests" style="background-color:#33CCFF;"></div>
+    </li>
+
+    <!--<li data-row="1" data-col="1" data-sizex="2" data-sizey="1">-->
+      <!--<div data-id="twitter_mentions" data-view="Comments" style="background-color:#ff9618;" data-moreinfo="Tweets tagged with #coupa"></div>-->
+      <!--<i class="icon-twitter icon-background"></i>-->
+    <!--</li>-->
+  </ul>
+
+</div>
