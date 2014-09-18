@@ -20,7 +20,7 @@ SCHEDULER.every '20s', :first_in => 0 do
   pull_request_per_branch_count = branches.map do |branch|
     row = {
         :label => branch,
-        :value => client.pull_requests(GITHUB_REPOSITORY, 500, base: branch, :state => 'open').count
+        :value => client.pull_requests(GITHUB_REPOSITORY, 10000, base: branch, per_page: 200, :state => 'open').count
     }
   end
   send_event('pull_requests',  { items: pull_request_per_branch_count })
