@@ -14,13 +14,13 @@ user.login
 
 SCHEDULER.every '20s', :first_in => 0 do
 
-  branches = ['master', '011_release', 'automation', 'master_rails_3_1_official']
+  branches = ['master', '012_release', '011_release', 'automation', 'master_rails_3_1_official']
 
 
   pull_request_per_branch_count = branches.map do |branch|
     row = {
         :label => branch,
-        :value => client.pull_requests(GITHUB_REPOSITORY, 10000, base: branch, per_page: 200, :state => 'open').count
+        :value => client.pull_requests(GITHUB_REPOSITORY, '', base: branch, per_page: 200, :state => 'open').count
     }
   end
   send_event('pull_requests',  { items: pull_request_per_branch_count })

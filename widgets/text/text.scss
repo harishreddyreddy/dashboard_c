@@ -3,8 +3,8 @@
 // ----------------------------------------------------------------------------
 $background-color:  #ec663c;
 
-$title-color:       rgba(255, 255, 255, 0.7);
-$moreinfo-color:    rgba(255, 255, 255, 0.7);
+$title-color:       rgba(255, 255, 255, 1);
+$moreinfo-color:    rgba(255, 255, 255, 1);
 
 // ----------------------------------------------------------------------------
 // Widget-text styles
@@ -12,6 +12,10 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
 .widget-text {
 
   background-color: $background-color;
+
+  h1 {
+    font-size: 60px;
+  }
 
   .title {
     color: $title-color;
