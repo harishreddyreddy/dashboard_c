@@ -12,7 +12,6 @@ gem 'newrelic_api'
 gem 'thin'
 gem 'garb', :git => 'git://github.com/Sija/garb.git'
 gem 'httparty'
-gem 'twitter'
 gem 'octokit'
 
 group :test, :development do
