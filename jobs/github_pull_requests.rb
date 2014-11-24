@@ -12,7 +12,7 @@ user = client.user
 user.login
 
 
-SCHEDULER.every '20s', :first_in => 0 do
+SCHEDULER.every '200000s', :first_in => 0 do
 
   branches = ['master', '012_release', '011_release', 'automation', 'master_rails_3_1_official']
 
