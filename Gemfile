@@ -16,5 +16,6 @@ gem 'httparty'
 gem 'octokit'
 
 group :test, :development do
-  gem 'debugger'
+  gem 'pry'
+  gem 'pry-debugger'
  end
