@@ -14,7 +14,3 @@ gem 'thin'
 gem 'garb', :git => 'git://github.com/Sija/garb.git'
 gem 'httparty'
 gem 'octokit'
-
-group :test, :development do
-  gem 'debugger'
- end
