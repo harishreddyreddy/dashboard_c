@@ -11,7 +11,7 @@ branche_names = {'coupa_development (master_fox)' => 'Master',
             'coupa_development (012_0_2_release)' => 'R12_0_2'}
 
   result_override = {'Master' => true, 'R12'=> true, 'R12 Unit'=> false,
-                     'R11' => false, 'R11_0_14' => false, 'R12_0_2' => false}
+                     'R11' => true, 'R11_0_14' => true, 'R12_0_2' => false}
 
   projects.each do |project|
       send_event(branche_names[project.name], {
