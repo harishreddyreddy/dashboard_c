@@ -17,6 +17,7 @@ branche_names = {'coupa_development (master_fox)' => 'Master',
         currentResult: result_override[branche_names[project.name]] ?  'Success' : project.last_build_status,
         lastResult: result_override[branche_names[project.name]] ?  'Success' : project.last_build_status ,
         timestamp: project.last_build_time_str,
+        message: branche_names[project.name] == 'R12_0_3' ? 'Unit & integration tests' : '' ,
         value: 0
       })
   end
