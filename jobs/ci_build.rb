@@ -10,12 +10,12 @@ branche_names = {'coupa_development (master_fox)' => 'Master',
             'coupa_development (012_0_3_release)' => 'R12_0_3'}
 
   result_override = {'Master' => true, 'R12'=> true, 'R12 Unit'=> false,
-                     'R11' => true, 'R12_0_3' => true}
+                     'R11' => false, 'R12_0_3' => false}
 
   projects.each do |project|
       send_event(branche_names[project.name], {
-        currentResult: result_override[branche_names[project.name]] ?  'Success' : project.last_build_status,
-        lastResult: result_override[branche_names[project.name]] ?  'Success' : project.last_build_status ,
+        currentResult: result_override[branche_names[project.name]] ?  'Override' : project.last_build_status,
+        lastResult: result_override[branche_names[project.name]] ?  'Override' : project.last_build_status ,
         timestamp: project.last_build_time_str,
         message: branche_names[project.name] == 'R12_0_3' ? 'Unit & integration tests' : '' ,
         value: 0

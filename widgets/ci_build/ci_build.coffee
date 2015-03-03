@@ -4,6 +4,8 @@ class Dashing.CiBuild extends Dashing.Widget
   @accessor 'bgColor', ->
     if @get('currentResult') == "Success"
       "#00B85C"
+    else if @get('currentResult') == "Override"
+      "#0EBFE9"
     else if @get('currentResult') == "Failure"
       "#D26771"
     else if @get('currentResult') == "Building"
