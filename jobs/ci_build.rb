@@ -11,7 +11,7 @@ branche_names = {'coupa_development (master)' => 'master',
             'coupa_development (012_0_5_release)' => '12_0_5',
             'coupa_development (011_0_17_release)' => '11_0_17'}
 
-  result_override = {'master' => false, 'r12'=> false, 'r12_unit'=> false,
+  result_override = {'master' => true, 'r12'=> false, 'r12_unit'=> false,
                      'r11' => false, '12_0_4' => false, '12_0_5' => false, '11_0_17' => false}
 
   projects.each do |project|
