@@ -24,7 +24,7 @@ class CCTray
   end
 
   def fetch
-    builds = Nokogiri::XML(get).css("Project").select { |project| ['coupa_development (011_release)' ,'coupa_development (012_release)', 'coupa_development (master)', 'coupa_development (012_release_unit_tests)', 'coupa_development (012_0_4_release)', 'coupa_development (012_0_5_release)', 'coupa_development (011_0_17_release)'].any? { |w| project['name'] == w } }
+    builds = Nokogiri::XML(get).css("Project").select { |project| ['coupa_development (011_release)' ,'coupa_development (012_release)', 'coupa_development (master)', 'coupa_development (012_release_unit_tests)', 'coupa_development (012_0_4_release)', 'coupa_development (012_0_5_release)', 'coupa_development (011_0_18_release)'].any? { |w| project['name'] == w } }
 
     builds.map do |branch|
       Project.new(branch[:name],
