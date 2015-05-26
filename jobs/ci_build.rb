@@ -7,11 +7,11 @@ branche_names = {'coupa_development (master)' => 'master',
             'coupa_development (012_release)' => 'r12',
             'coupa_development (012_release_unit_tests)' => 'r12_unit',
             'coupa_development (011_release)' => 'r11',
-            'coupa_development (012_0_8_release)' => '12_0_8',
+            'coupa_development (012_0_9_release)' => '12_0_9',
             'coupa_development (011_0_21_release)' => '11_0_21'}
 
   result_override = {'master' => false, 'r12'=> false, 'r12_unit'=> false,
-                     'r11' => false, '12_0_8' => false, '11_0_21' => false}
+                     'r11' => false, '12_0_9' => false, '11_0_21' => false}
 
   projects.each do |project|
       send_event(branche_names[project.name], {
