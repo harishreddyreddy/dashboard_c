@@ -1,7 +1,7 @@
 <script type='text/javascript'>
     $(function() {
         // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
-        Dashing.gridsterLayout('[{"col":3,"row":2,"size_x":1,"size_y":1},{"col":1,"row":1,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":1},{"col":4,"row":1,"size_x":1,"size_y":1},{"col":2,"row":2,"size_x":1,"size_y":1}]')
+        Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":1},{"col":4,"row":1,"size_x":1,"size_y":1},{"col":2,"row":2,"size_x":1,"size_y":1}]')
         Dashing.widget_base_dimensions = [310, 320]
       Dashing.numColumns = 4
     });
@@ -10,11 +10,6 @@
 <div style="font-size: 40px"><a href="https://coupadev.atlassian.net/wiki/display/CQ/Solano+Build+Failures">Build result details</a></div>
 <div class="gridster">
   <ul>
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="build_status" data-view="Text" data-title="R10" data-text="Jenkins" style="background-color:#00B85C;"></div>
-      <!--GREEN 00B85C RED FF0033-->
-    </li>
-
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="master" data-view="CiBuild" data-title="Master" data-min="0" data-max="100"></div>
     </li>
