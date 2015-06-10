@@ -13,7 +13,7 @@ class Dashing.CiBuild extends Dashing.Widget
     else if @get('currentResult') == "PREBUILD"
       "#ff9618"
     else
-      "#999"
+      "#d26771"
 
   constructor: ->
     super
