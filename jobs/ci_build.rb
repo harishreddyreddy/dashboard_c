@@ -5,6 +5,7 @@ SCHEDULER.every '20s', :first_in => 0  do
 
 branche_names = {'coupa_development (master)' => 'master',
             'coupa_development (013_0_0_release)' => '13_0_0',
+            'coupa_development (013_release)' => '013_release',
             'coupa_development (012_release)' => 'r12',
             'coupa_development (012_release_unit_tests)' => 'r12_unit',
             'coupa_development (011_release)' => 'r11',
