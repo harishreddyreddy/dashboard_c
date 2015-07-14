@@ -4,7 +4,6 @@ SCHEDULER.every '20s', :first_in => 0  do
   projects = tray.fetch
 
 branche_names = {'coupa_development (master)' => 'master',
-            'coupa_development (013_0_0_release)' => '13_0_0',
             'coupa_development (013_release)' => '013_release',
             'coupa_development (012_release)' => 'r12',
             'coupa_development (012_release_unit_tests)' => 'r12_unit',
@@ -12,7 +11,7 @@ branche_names = {'coupa_development (master)' => 'master',
             'coupa_development (012_0_12_release)' => '12_0_12',
             'coupa_development (011_0_22_release)' => '11_0_22'}
 
-  result_override = {'master' => false, '13_0_0'=> false, 'r12'=> false, 'r12_unit'=> false,
+  result_override = {'master' => false, 'r12'=> false, 'r12_unit'=> false,
                      'r11' => false, '12_0_12' => false, '11_0_22' => false}
 
   projects.each do |project|
