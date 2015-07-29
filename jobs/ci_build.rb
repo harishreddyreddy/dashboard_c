@@ -7,12 +7,11 @@ branche_names = {'coupa_development (master)' => 'master',
             'coupa_development (013_release)' => '013_release',
             'coupa_development (013_0_1_release)' => '13_0_1',
             'coupa_development (012_release)' => 'r12',
-            'coupa_development (012_release_unit_tests)' => 'r12_unit',
             'coupa_development (011_release)' => 'r11',
             'coupa_development (012_0_13_release)' => '12_0_13',
             'coupa_development (011_0_22_release)' => '11_0_22'}
 
-  result_override = {'master' => false, 'r12'=> false, 'r12_unit'=> false, '12_0_13' => false, '13_0_1' => false,
+  result_override = {'master' => false, 'r12'=> false, '12_0_13' => false, '13_0_1' => false,
                      'r11' => false, '12_0_11' => false, '11_0_22' => false, '013_release' => false}
 
   projects.each do |project|
@@ -20,7 +19,6 @@ branche_names = {'coupa_development (master)' => 'master',
         currentResult: result_override[branche_names[project.name]] ?  'Override' : project.last_build_status,
         lastResult: result_override[branche_names[project.name]] ?  'Override' : project.last_build_status ,
         timestamp: project.last_build_time_str,
-        message: branche_names[project.name] =~ /12_0_/ ? 'Unit & integration tests' : '' ,
         value: 0
       })
   end
